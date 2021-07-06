@@ -77,7 +77,7 @@
     .no-result-container {
       background-color: rgba(250, 250, 250, 0.4);
       height: 100%;
-      width: 94%;
+      width: 102%;
       position: absolute;
     }
     .result-list {
