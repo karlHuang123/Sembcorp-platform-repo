@@ -27,6 +27,8 @@ npm run build
 
 搜索框响应事件发送http请求，并根据返回处理对应的信息。
 
+###搜索框输入false模拟请求报错。
+
 can be better:
 动画过渡没有做，时间太紧急了，只有上周日下午和本周二有时间弄，不想耽误太长时间，思路可以是用css的transtion或者animation配合js处理；
 
