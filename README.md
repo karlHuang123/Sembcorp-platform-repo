@@ -7,7 +7,7 @@ npm install
 ```
 
 ## Usage
-npm serve
+ng serve
 
 ## Plugins
 moment.js
