@@ -22,7 +22,9 @@ leaflet.markercluster
 3. For the background blur, I have no idea how to accomplish the shadow of the blur, need time to research and try.
 
 Final page:
-![Uploading image.png…]()
+![image](https://github.com/karlHuang123/dc-text-repo/assets/81177242/543f1435-c1a7-4295-9a74-1af6e584b87d)
+![image](https://github.com/karlHuang123/dc-text-repo/assets/81177242/64cce606-def6-4db1-9fcc-77b1dcb6b00a)
+
 
 
 
