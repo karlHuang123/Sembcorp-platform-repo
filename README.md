@@ -21,6 +21,8 @@ leaflet.markercluster
 2. For mobile side, I may spend longer time to do the design, so I could handle it in the future.
 3. For the background blur, I have no idea how to accomplish the shadow of the blur, need time to research and try.
 
+Final page:
+![Uploading image.png…]()
 
 
 
