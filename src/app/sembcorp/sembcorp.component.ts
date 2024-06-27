@@ -51,7 +51,7 @@ export class SembcorpComponent {
 		const marker = this.markers.filter(item => {
 			return item.options.title === event.title;
 		})
-		this.onMarkerClick(marker[0]);
+		this.onMarkerClick(marker[0], false);
 	}
 
 	openDialog() {
@@ -81,7 +81,7 @@ export class SembcorpComponent {
 		this.resetActiveMarker();
 	}
 	
-	onMarkerClick(marker: Marker) {
+	onMarkerClick(marker: Marker, isOpenModal: boolean) {
 		this.searchTerm = marker.options.title;
 		this.resetActiveMarker();
 	
@@ -96,7 +96,9 @@ export class SembcorpComponent {
 		}
 		this.map.setView(latLng, this.map.getZoom());
 		this.cdr.detectChanges()
-		this.openDialog()
+		if (isOpenModal) {
+			this.openDialog()
+		}
 	}
 	
 	resetActiveMarker() {
@@ -141,7 +143,7 @@ export class SembcorpComponent {
 			  })
 			  this.markers.forEach(marker => {
 				marker.on('click', () => {
-					this.onMarkerClick(marker)
+					this.onMarkerClick(marker, true)
 				});
 			  });
 			},
