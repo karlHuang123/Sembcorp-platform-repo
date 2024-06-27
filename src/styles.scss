@@ -1,0 +1,141 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/css/font-awesome.css';
+.search-section {
+    position: fixed;
+    top: 40px;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.search-container {
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+  }
+  .search-input {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    flex-grow: 1;
+    color: #fff;
+    width: 300px;
+    padding: 5px 10px 5px 40px;
+    margin-left: 10px;
+  }
+  
+  .search-input::placeholder {
+    color: #fff;
+  }
+  
+  .search-button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 20px;
+    position: absolute;
+    left: 390px;
+    top: 7px;
+  }
+
+  .list-button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 20px;
+    position: absolute;
+    left: 100px;
+    top: 9px;
+  }
+
+  .common-button {
+    background-color: transparent;
+    border: none;
+    padding: 6px 12px;
+    margin-left: 8px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  .result-list {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .result-list li {
+    cursor: pointer;
+    padding: 3px 0;
+  }
+  li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .ft-bold {
+    font-weight: bold;
+  }
+  .ft-bolder {
+    font-weight: bolder;
+  }
+  .ft-20 {
+    font-size: 20px;
+  }
+  .ft-16 {
+    font-size: 16px;
+  }
+  .ft-12 {
+    font-size: 12px;
+  }
+  .ft-8 {
+    font-size: 8px;
+  }
+  .dialog {
+    background-color: transparent; 
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+    color: white;
+  }
+  .dialog-section {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    background-color: transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  }
+  .dialog-left {
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    left: 1px;
+  }
+  .dialog-right {
+    backdrop-filter: blur(14px);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .dialog-left ul {
+    list-style: none;
+  }
+  .dialog-left ul li {
+    margin: 10px 0;
+  }
+  .mr-6 {
+    margin-right: 6px;
+  }
+  .mr-10 {
+    margin-right: 10px;
+  }
+  .modal-btn-group {
+    position: absolute;
+    top: 26px;
+    right: 40px;
+  }

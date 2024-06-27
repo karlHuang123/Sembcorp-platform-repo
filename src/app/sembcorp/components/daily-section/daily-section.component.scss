@@ -1,0 +1,30 @@
+.main-container {
+    position: absolute;
+    width: 500px;
+    z-index: 999;
+    top: 120px;
+    right: 5%;
+}
+.basic-information {
+    display: flex;
+}
+.assets {
+    font-size: 24px;
+    background-color: rgba($color: #5a5858, $alpha: 0.4);
+    backdrop-filter: blur(10px);
+    padding: 14px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.hint::after {
+    content: 'last update by 2024-06-25';
+    display: block;
+    font-size: 10px;
+}
+.daily-energy {
+    height: 250px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: rgba($color: #5a5858, $alpha: 0.4);
+    backdrop-filter: blur(10px);
+}

@@ -1,0 +1,45 @@
+.modal-container {
+    background-color: transparent;
+}
+.right-section {
+    padding: 20px 40px;
+    border-top-right-radius: 20px;
+}
+.dash-list {
+    list-style: none;
+    li {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    li:hover {
+        background-color: transparent;
+    }
+}
+.basic-info-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    .assets {
+        background-color: rgba($color: #000000, $alpha: .3);
+        padding: 10px;
+        width: 96%;
+        border-radius: 20px;
+        .assets-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 10px;
+            .info-ele {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .today-performance {
+        background-color: rgba($color: #000000, $alpha: .3);
+        width: 96%;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+.chart-section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}

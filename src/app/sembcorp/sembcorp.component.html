@@ -1,0 +1,42 @@
+<div class="" *ngIf="showDemo">
+	<div class="">
+		<app-search-bar [titles]="titles" (clicked)="handleResultClick($event)"></app-search-bar>
+		<div class="">
+			<!-- Map -->
+			<div leaflet style="height: 100vh;" [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
+				<div *ngFor="let m of markers" [leafletLayer]="m"></div>
+			</div>
+		</div>
+		<app-daily-section></app-daily-section>
+	</div>	
+	<dialog #dialog class="dialog">
+		<div class="dialog-section">
+			<div class="dialog-left">
+				<h2 class="ft-bold">Dashboards</h2>
+				<div>
+					<ul class="dash-list" style="padding: 0;">
+						<li *ngFor="let dash of dashList">
+							<i class="fa fa-gear text-white mr-10"></i>{{ dash }}
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dialog-right">
+				<app-modal [currentLocation]="currentLocation"></app-modal>
+				<app-chart-group></app-chart-group>
+			</div>
+		</div>
+		<div class="modal-btn-group">
+			<button class="common-button">
+				<i class="fa fa-bell-o text-white"></i>
+			</button>
+		  	<button (click)="dialog.close()" class="common-button">
+            	<i class="fa fa-times text-white"></i>
+        	</button>
+		</div>
+	  </dialog>
+</div>
+
+
+
+

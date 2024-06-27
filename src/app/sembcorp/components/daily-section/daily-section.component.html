@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="basic-information">
+        <div class="assets text-white">
+            <div class="ft-16">Assets</div>
+            <div class="ft-bolder">1452</div>
+            <div class=""><strong>1461.23</strong> <span class="ft-16">MWp</span></div>
+        </div>
+        <div class="assets text-white">
+            <div class="ft-16 hint">Today's Performance</div>
+            <div class=""><strong>1461.23</strong> <span class="ft-16">MWp</span></div>
+            <div><strong class="ft-bolder">23</strong> <span class="ft-16">MW</span></div>
+        </div>
+    </div>
+    <div class="daily-energy">
+        <ag-charts-angular
+            style="height: 100%"
+            [options]="chartOptions ? chartOptions : {}">
+        </ag-charts-angular>
+    </div>
+</div>

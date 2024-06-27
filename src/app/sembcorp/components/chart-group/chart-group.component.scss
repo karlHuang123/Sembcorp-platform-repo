@@ -1,0 +1,17 @@
+
+.chart-group {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    padding: 20px;
+    .donut {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    }
+    .area {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        width: 95%;
+        margin-left: 20px;
+    }
+}

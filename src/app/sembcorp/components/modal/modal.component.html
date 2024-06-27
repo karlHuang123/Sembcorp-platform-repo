@@ -1,0 +1,44 @@
+<div class="modal-container">
+    <div class="right-section">
+        <h2 class="ft-bold">{{ currentLocation.title }}</h2>
+        <div class="basic-info-section">
+            <div class="assets">
+                    <div>Assets</div>
+                    <div class="assets-info">
+                        <div class="info-ele ft-16">
+                            <div class="ft-12">Capacity</div>
+                            <div class="ft-20"><span class="ft-bold mr-6">97</span> <span class="ft-12">MWp</span></div>
+                        </div>
+                        <div class="info-ele ft-16">
+                            <div class="ft-12">Irradiance</div>
+                            <div class="ft-20"><span class="ft-bold mr-6">359.4</span> <span class="ft-12">KW/m^2</span></div>
+                        </div>
+                        <div class="info-ele ft-16">
+                            <div class="ft-12">Plant Matrix</div>
+                            <div class="ft-8">INV X SC</div>
+                            <div class="ft-20"><span class="ft-bold mr-6">28 X 24</span></div>
+                        </div>
+                        <div class="info-ele ft-16">
+                            <div class="ft-12">Days Online </div>
+                            <div class="ft-20"><span class="ft-bold mr-6">2394</span> <span class="ft-12">Days</span></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="today-performance">
+                <h5>Today's Performance</h5>
+                <div class="ft-16">Performance Ratio</div> 
+                <div class="ft-20"><span class="ft-bold mr-6">79.46</span><span class="ft-12">%</span></div>
+                <div class="ft-16">Inveter Efficiency</div> 
+                <div class="ft-20"><span class="ft-bold mr-6">97.12</span><span class="ft-12">%</span></div>
+            </div>
+            <div 
+                leaflet
+                *ngIf="showMap"
+                style="height: 100%; width: 90%; margin-left: 10px; border-radius: 20px;" 
+                [leafletOptions]="{layers: [LAYER_OSM], zoom: 18, center: options.center}" 
+                (leafletMapReady)="onMapReady($event)">
+				<div *ngFor="let m of markers" [leafletLayer]="m"></div>
+			</div>
+        </div>
+    </div>
+</div>

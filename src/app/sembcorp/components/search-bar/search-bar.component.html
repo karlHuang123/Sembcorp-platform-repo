@@ -1,0 +1,39 @@
+<div class="search-section">
+    <div class="search-container">
+        <button class="common-button">
+            <i class="fa fa-hashtag text-white"></i>
+        </button>
+        <button class="common-button">
+            <i class="fa fa-gear text-white"></i>
+        </button>
+        <input 
+          type="text" 
+          [(ngModel)]="searchTerm" 
+          (input)="onInputChange()" 
+          (blur)="onBlur()"
+          placeholder="Search..." 
+          class="search-input">
+        <button class="common-button">
+            <i class="fa fa-bell-o text-white"></i>
+        </button>
+        <button class="common-button">
+            <i class="fa fa-th-large text-white"></i>
+        </button>
+        <button class="common-button">
+            <i class="fa fa-user-o text-white"></i>
+        </button>
+        <button (click)="onSearch()" class="search-button">
+          <i class="fa fa-search text-white"></i>
+        </button>
+        <button class="list-button">
+            <i class="fa fa-list text-white"></i>
+        </button>
+    </div>
+    <div class="search-results" *ngIf="searchResults.length > 0">
+        <ul class="result-list text-white">
+          <li *ngFor="let result of searchResults" (click)="onResultClick(result)">
+            {{ result }}
+          </li>
+        </ul>
+    </div>
+</div>
