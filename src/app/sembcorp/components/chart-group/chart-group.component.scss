@@ -15,3 +15,11 @@
         margin-left: 20px;
     }
 }
+
+@media (max-width: 484px) {
+    .chart-group {
+        overflow: scroll;
+        height: auto !important;
+        grid-template-columns: 2fr 1fr;
+    }
+}

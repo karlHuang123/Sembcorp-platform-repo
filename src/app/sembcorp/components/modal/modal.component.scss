@@ -43,3 +43,15 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+
+@media (max-width: 484px) {
+    .right-section {
+        overflow-x: scroll;
+        padding: 20px;
+    }
+    .basic-info-section {
+        overflow-x: scroll;
+        grid-template-columns: 1.5fr 1fr 1.8fr;
+        width: 700px;
+    }
+}

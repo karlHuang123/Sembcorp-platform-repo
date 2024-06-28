@@ -25,7 +25,13 @@ export class SembcorpComponent {
 	searchTerm: string = '';
 	searchResults: string[] = [];
 	searchSubject = new Subject<string>();
-	currentLocation: any = null
+	currentLocation: any = {
+		title: '',
+		latLng: {
+			lat: 0,
+			lng: 0
+		}
+	}
 	dashList: string[] = [
 		'Inverter Efficiency',
 		'String Performance',
@@ -35,6 +41,8 @@ export class SembcorpComponent {
 	  ];
 	  windowWidth: number;
 	  windowHeight: number;
+	  isMobile: boolean = false;
+	  showDaily: boolean = false;
 
 	// Open Street Map definitions
 	LAYER_OSM = tileLayer('https://maps3.shipdt.com/vt?lyrs=y&h1=zh-CN&gl=CN&x={x}&y={y}&z={z}', { maxZoom: 28, attribution: 'Open Street Map' });
@@ -120,6 +128,16 @@ export class SembcorpComponent {
 		);
 	}
 
+	openDailySection() {
+		this.showDaily = false
+	}
+
+	handleDailyColse(event: any) {
+		if(event.msg === 'close') {
+			this.showDaily= true
+		}
+	}
+
 	getMarkersData() {
 		this.dataService.getMarksData().subscribe(
 			(response) => {
@@ -156,6 +174,25 @@ export class SembcorpComponent {
 	ngOnInit() {
 		// get markers data
 		this.getMarkersData();
+		var os = function (){
+			var ua = navigator.userAgent,
+			isWindowsPhone = /(?:Windows Phone)/.test(ua),
+			isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+			isAndroid = /(?:Android)/.test(ua),
+			isTablet = false,
+			isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+			isPc = !isPhone && !isAndroid && !isSymbian;
+			return {
+				isTablet: isTablet,
+				isPhone: isPhone,
+				isAndroid: isAndroid,
+				isPc: isPc
+			};	
+		}();
+		if (os.isPhone) {
+			this.isMobile = true
+			this.showDaily = this.isMobile
+		}
 		// Primarily for debugging
 		setTimeout(() => {
 			this.showDemo = true;

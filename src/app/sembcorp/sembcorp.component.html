@@ -1,13 +1,14 @@
 <div class="" *ngIf="showDemo">
 	<div class="">
 		<app-search-bar [titles]="titles" (clicked)="handleResultClick($event)"></app-search-bar>
+		<div class="daily-button" *ngIf="isMobile" (click)="openDailySection()">Daily Info</div>
 		<div class="">
 			<!-- Map -->
 			<div leaflet style="height: 100vh;" [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
 				<div *ngFor="let m of markers" [leafletLayer]="m"></div>
 			</div>
 		</div>
-		<app-daily-section></app-daily-section>
+		<app-daily-section [isMobile]="isMobile" *ngIf="!showDaily" (closed)="handleDailyColse($event)"></app-daily-section>
 	</div>	
 	<dialog #dialog class="dialog">
 		<div class="dialog-section">

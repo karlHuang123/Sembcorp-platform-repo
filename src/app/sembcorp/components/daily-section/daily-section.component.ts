@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AgChartsAngular } from 'ag-charts-angular';
 import { AgChartOptions } from 'ag-charts-community';
 import { DataService } from '../../service/service';
@@ -13,6 +13,9 @@ import * as moment from 'moment';
   imports: [AgChartsAngular],
 })
 export class DailySectionComponent {
+  @Input() isMobile: boolean;
+  @Output() closed = new EventEmitter<any>();
+
   public chartOptions: AgChartOptions;
   data: any[]
   constructor(private dataService: DataService) {
@@ -60,4 +63,7 @@ export class DailySectionComponent {
       }
     )
   }
+  onClose() {
+      this.closed.emit({msg: 'close'})
+    }
 }

@@ -8,6 +8,9 @@
 .basic-information {
     display: flex;
 }
+.close-button {
+    display: none;
+}
 .assets {
     font-size: 24px;
     background-color: rgba($color: #5a5858, $alpha: 0.4);
@@ -28,3 +31,18 @@
     background-color: rgba($color: #5a5858, $alpha: 0.4);
     backdrop-filter: blur(10px);
 }
+
+@media (max-width: 484px) {
+    .main-container {
+        width: 95%;
+        left: 3%;
+        top: 140px;
+    }
+    .close-button {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba($color: #000, $alpha: 0.6);
+    }
+  }
