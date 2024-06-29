@@ -29,8 +29,8 @@ Final page:
 
 mobile side:
 
-For mobile side, I hide the daily information box and make a clickable button to control the show&hide of it, as the first picture.
-For the detail modal, each part can be scrolled to see the whole information.
+For mobile side, I hide the daily information box and make a clickable button to control the show&hide of it, as the first picture. The reason why I use a tag button is that if we have more information needed to be shown on the map, we can use a tag button list to handle that, each button refelects to one information modal or popup, just like google map on mobile.
+For the detail modal, each part can be scrolled to see the whole information. 
 
 ![e3427349ec5c880617530ede012c1e2](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/f900b9ee-41ec-49d8-aec1-40fce418d56e)![ece4f3df457d4c185b84e0ae7da8525](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/8caffb73-bf0c-444b-a32d-25fe29ab6c32)![b1b9de83bbcc6df0defc69c4d59c2bf](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/f8ccf97a-a0d7-4055-addf-3d9d5c490312)
 
