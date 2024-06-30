@@ -112,7 +112,8 @@
       width: 95%;
     }
     .dialog-left ul li {
-      flex: 0 0 180px;
+      flex: 0 0 auto;
+      margin-right: 12px;
     }
     .modal-btn-group {
       right: 10px;
