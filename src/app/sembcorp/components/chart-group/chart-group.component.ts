@@ -76,9 +76,7 @@ export class ChartGroupComponent {
             axes: 'xy',
             scrollingStep: 0.4,
             enableAxisDragging: true,
-            enablePanning: true,
             enableScrolling: true,
-            enableSelecting: true,
             minVisibleItemsX: 10,
           },
           // Series: Defines which chart type and data to use
