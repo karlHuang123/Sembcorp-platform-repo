@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AgChartsAngular } from 'ag-charts-angular';
 import { AgChartOptions } from 'ag-charts-community';
+import { AgCharts } from 'ag-charts-enterprise';
 import { DataService } from '../../service/service';
 
 import * as moment from 'moment';
@@ -16,9 +17,10 @@ export class DailySectionComponent {
   @Input() isMobile: boolean;
   @Output() closed = new EventEmitter<any>();
 
-  public chartOptions: AgChartOptions;
+  public chartOptions: AgChartOptions = {};
   data: any[]
   constructor(private dataService: DataService) {
+    AgCharts.setLicenseKey('The MIT License');
     const today = moment().format('YYYY-MM-DD')
     let data = []
     this.dataService.getEnergyData({startDate: today, endDate: today}).subscribe(
@@ -36,6 +38,16 @@ export class DailySectionComponent {
             text: "Daily(Today) Energy Generator",
             color: 'white',
           },
+          zoom: {
+            enabled: true,
+            axes: 'xy',
+            scrollingStep: 0.4,
+            enableAxisDragging: true,
+            enablePanning: true,
+            enableScrolling: true,
+            enableSelecting: true,
+            minVisibleItemsX: 10,
+          },
           data: this.data,
           background: {
             fill: "rgba(0, 0, 0, 0)",
@@ -49,7 +61,7 @@ export class DailySectionComponent {
               label: {
                 color: 'white',
                 rotation: 60
-              }
+              },
             },
             {
               type: "number",

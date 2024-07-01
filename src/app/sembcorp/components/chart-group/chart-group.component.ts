@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AgChartsAngular } from 'ag-charts-angular';
 import { AgChartOptions } from 'ag-charts-community';
+import { AgCharts } from 'ag-charts-enterprise';
 import { DataService } from '../../service/service';
 
 import * as moment from 'moment';
@@ -18,6 +19,7 @@ export class ChartGroupComponent {
   public lineOptions: AgChartOptions;
   data: any[] = []
   constructor(private dataService: DataService) {
+    AgCharts.setLicenseKey('The MIT License');
     this.chartOptions = {
       title: {
         text: "Today's Generation",
@@ -68,6 +70,16 @@ export class ChartGroupComponent {
           data: this.data,
           background: {
             fill: "rgba(0, 0, 0, 0)",
+          },
+          zoom: {
+            enabled: true,
+            axes: 'xy',
+            scrollingStep: 0.4,
+            enableAxisDragging: true,
+            enablePanning: true,
+            enableScrolling: true,
+            enableSelecting: true,
+            minVisibleItemsX: 10,
           },
           // Series: Defines which chart type and data to use
           series: [{ type: 'area', xKey: 'hour', yKey: 'direct_radiation'}],
