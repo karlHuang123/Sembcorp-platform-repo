@@ -23,6 +23,14 @@ leaflet.markercluster
 4. Using html dialog for modal, do not have fade in&out animations.
 5. Didn't add auto clear feature for search input, can be done in next step.
 
+## Things have been improved
+1. Add allow clear button on search bar:
+![1719933671765](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/9e707c89-fb1f-4a8e-81d8-2253de38f0f8)
+2. Improve dialog animation and background:
+![1719933846358](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/693467b1-80a3-463c-b1b9-50dbe5a53c9a)
+3. Fix mobile UI part
+4. Improve background blur
+
 Final page:
 ![image](https://github.com/karlHuang123/dc-text-repo/assets/81177242/543f1435-c1a7-4295-9a74-1af6e584b87d)
 ![image](https://github.com/karlHuang123/dc-text-repo/assets/81177242/64cce606-def6-4db1-9fcc-77b1dcb6b00a)
