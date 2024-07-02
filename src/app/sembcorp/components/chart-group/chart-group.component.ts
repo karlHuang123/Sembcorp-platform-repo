@@ -32,6 +32,9 @@ export class ChartGroupComponent {
       background: {
         fill: "rgba(0, 0, 0, 0)",
       },
+      tooltip: {
+        enabled: false
+      },
       // Series: Defines which chart type and data to use
       series: [{ 
         type: 'donut',           
