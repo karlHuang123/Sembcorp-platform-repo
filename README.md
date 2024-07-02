@@ -25,9 +25,9 @@ leaflet.markercluster
 
 ## Things have been improved
 1. Add allow clear button on search bar:
-![1719933671765](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/9e707c89-fb1f-4a8e-81d8-2253de38f0f8)
+![image](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/44a83e92-08aa-4f86-9fa9-2ca3586316e3)
 2. Improve dialog animation and background:
-![1719933846358](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/693467b1-80a3-463c-b1b9-50dbe5a53c9a)
+![image](https://github.com/karlHuang123/Sembcorp-platform-repo/assets/81177242/fd3503ef-e041-4530-92b6-0a74fe3b5d0b)
 3. Fix mobile UI part
 4. Improve background blur
 
