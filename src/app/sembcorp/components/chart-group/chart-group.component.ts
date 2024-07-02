@@ -20,7 +20,7 @@ export class ChartGroupComponent {
   data: any[] = []
   constructor(private dataService: DataService) {
     AgCharts.setLicenseKey('The MIT License');
-    this.chartOptions = {
+    this.chartOptions = { // dount chart config
       title: {
         text: "Today's Generation",
         color: 'white',
@@ -52,6 +52,7 @@ export class ChartGroupComponent {
     };
     const today = moment().format('YYYY-MM-DD')
     let data = []
+    // get energy data and input into chart
     this.dataService.getEnergyData({startDate: today, endDate: today}).subscribe(
       (response: any) => {
         response.hourly.direct_radiation.forEach((item: string, index: number) => {
@@ -102,5 +103,4 @@ export class ChartGroupComponent {
       }
     )
   }
-
 }

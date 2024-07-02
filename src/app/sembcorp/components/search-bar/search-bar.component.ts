@@ -47,4 +47,9 @@ export class SearchBarComponent {
 		  item.toLowerCase().includes(term.toLowerCase())
 		);
 	}
+
+	clearSearch() { // allow clear
+		this.searchTerm = ''
+		this.searchResults = []
+	}
 }

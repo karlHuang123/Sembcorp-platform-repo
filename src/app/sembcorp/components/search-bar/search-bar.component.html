@@ -29,8 +29,11 @@
         <button class="common-button">
             <i class="fa fa-user-o text-white"></i>
         </button>
-        <button (click)="onSearch()" class="search-button">
+        <button (click)="onSearch()" class="search-button" *ngIf="!searchTerm">
           <i class="fa fa-search text-white"></i>
+        </button>
+        <button (click)="clearSearch()" class="search-button" *ngIf="searchTerm">
+            <i class="fa fa-times text-white"></i>
         </button>
         <button class="list-button">
             <i class="fa fa-list text-white"></i>

@@ -26,7 +26,7 @@ export class SembcorpComponent {
 	searchResults: string[] = [];
 	searchSubject = new Subject<string>();
 	currentLocation: any = {
-		title: '',
+		title: '' as string,
 		latLng: {
 			lat: 0,
 			lng: 0
@@ -55,20 +55,20 @@ export class SembcorpComponent {
 	};
 
 
-	handleResultClick(event: any) {
+	handleResultClick(event: any) { // function to handle autocomplete search result list item clicked
 		const marker = this.markers.filter(item => {
 			return item.options.title === event.title;
 		})
 		this.onMarkerClick(marker[0], false);
 	}
 
-	openDialog() {
+	openDialog() { // open details 
 		this.dialog.nativeElement.showModal();
 		window.dispatchEvent(new Event('resize'));
 	  }
 	
 
-	onMapReady(map: Map) {
+	onMapReady(map: Map) { // generate the map
 		this.map = map;
 		// add marker cluster
 		this.markerClusterGroup = new LMarkerCluster.MarkerClusterGroup({
@@ -89,7 +89,7 @@ export class SembcorpComponent {
 		this.resetActiveMarker();
 	}
 	
-	onMarkerClick(marker: Marker, isOpenModal: boolean) {
+	onMarkerClick(marker: Marker, isOpenModal: boolean) { // handle marker click to panning & open details
 		this.searchTerm = marker.options.title;
 		this.resetActiveMarker();
 	
@@ -109,14 +109,14 @@ export class SembcorpComponent {
 		}
 	}
 	
-	resetActiveMarker() {
+	resetActiveMarker() { // clear previous marker's position
 		if (this.activeMarker) {
 		  this.updateMarkerStyle(this.activeMarker, false);
 		  this.activeMarker = null;
 		}
 	}
 	
-	updateMarkerStyle(marker: Marker, isActive = true) {
+	updateMarkerStyle(marker: Marker, isActive = true) { // make marker bigger when selected
 		marker.setIcon(
 		  new Icon({
 			iconSize: isActive ? [32.5, 53.3] : [ 25, 41 ],
@@ -132,13 +132,17 @@ export class SembcorpComponent {
 		this.showDaily = false
 	}
 
+	closeModal() {
+		this.dialog.nativeElement.close();
+	}
+
 	handleDailyColse(event: any) {
 		if(event.msg === 'close') {
 			this.showDaily= true
 		}
 	}
 
-	getMarkersData() {
+	getMarkersData() { // get marker's information from api
 		this.dataService.getMarksData().subscribe(
 			(response) => {
 			  this.markList = response.area_metadata
@@ -174,7 +178,7 @@ export class SembcorpComponent {
 	ngOnInit() {
 		// get markers data
 		this.getMarkersData();
-		var os = function (){
+		var os = function (){ // detect user's device(mobile or desktop)
 			var ua = navigator.userAgent,
 			isWindowsPhone = /(?:Windows Phone)/.test(ua),
 			isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
