@@ -35,6 +35,20 @@
   .search-input::placeholder {
     color: #fff;
   }
+
+  .result-list {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 999;
+  }
+  .result-list li {
+    cursor: pointer;
+    padding: 3px 0;
+  }
+  li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
   
   .search-button {
     background-color: transparent;
